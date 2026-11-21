@@ -83,8 +83,8 @@ body.night #btn{background:rgba(40,26,80,.6);color:var(--cream)}
   <svg class="hill" style="bottom:24%;height:22%" viewBox="0 0 1000 200" preserveAspectRatio="none"><path d="M0 120 C150 40 300 40 450 100 C600 160 760 30 1000 90 V200 H0Z" fill="#cdeaa6"/></svg>
   <div id="far"></div>
   <svg class="hill" style="bottom:12%;height:26%" viewBox="0 0 1000 260" preserveAspectRatio="none"><path d="M0 90 C200 10 380 120 560 70 C720 25 860 60 1000 20 V260 H0Z" fill="#a9db8a"/></svg>
-  <div id="trees"></div>
   <div id="meadow"></div>
+  <div id="trees"></div>
 </div>
 
 <div id="flies" class="layer"></div>
@@ -124,7 +124,7 @@ function sakuraOld(){
   return `<svg viewBox="0 0 320 420" width="100%">${t}${g}</svg>`;
 }
 const T=$('#trees');
-[['left:-4%;bottom:14%;width:min(44vw,400px,50vh)',0],['right:-5%;bottom:12%;width:min(40vw,360px,45vh)',2]].forEach(([c,d])=>{const e=mk('div',c+`;animation-delay:-${d}s`,T);e.className='tree';e.innerHTML=sakura()});
+[['left:-3%;bottom:21%;width:min(50vw,400px,50vh)',0],['right:-4%;bottom:19%;width:min(44vw,360px,45vh)',2]].forEach(([c,d])=>{const e=mk('div',c+`;animation-delay:-${d}s`,T);e.className='tree';e.innerHTML=sakura()});
 const f=mk('div','left:40%;bottom:31%;width:min(22vw,200px);opacity:.8',$('#far'));f.className='tree';f.innerHTML=sakura();
 
 /* tulipanes */
@@ -150,9 +150,9 @@ for(let i=0;i<18;i++)mk('u',`left:${R(2,98)}%;top:${R(55,95)}%;--d:${R(3,6)}s;--
 const btn=$('#btn'), msg=$('#msg');
 function reveal(){msg.classList.add('reset');msg.classList.remove('show');void msg.offsetWidth;msg.classList.remove('reset');requestAnimationFrame(()=>msg.classList.add('show'))}
 const TXT={
- day:['Contigo hasta el silencio encuentra sentido,','eres esa luz que abraza mis días más grises.','Quiero despertar y encontrarte en mis pensamientos,','caminar contigo mientras florecen los tulipanes','y descubrir en tu mirada un pedacito de eternidad.','Quiero amarte incluso en tus días más difíciles,','ser tu refugio cuando la vida nos pese','y que, pase lo que pase, mi alma y mi corazon siempre buscaran ser parte de ti.'],
+ day:['Contigo hasta el silencio encuentra sentido,','eres esa luz que abraza mis días más grises.','Quiero despertar y encontrarte en mis pensamientos,','caminar contigo mientras florecen los tulipanes','y descubrir en tu mirada un pedacito de eternidad.','Quiero amarte incluso en tus días más difíciles,','ser tu refugio cuando la vida nos pese','y que, pase lo que pase, mi alma siga reconociendo la tuya.'],
  dayOld:['Contigo cada mañana vuelve a tener sentido,','eres la luz que hace florecer mi alegría.','Quiero despertar con tu nombre en mis labios,','caminar a tu lado entre campos de tulipanes','y encontrar en tus ojos mi lugar favorito.','Quiero ser ese amor que siempre te abrace,','hoy, mañana y mientras la vida nos lo permita.','Cada día, entre mil vidas, volvería a elegirte.'],
- night:['Isabella,','quiero ser tu calma cuando el mundo duela,','tu sonrisa cuando la vida se vuelva gris,','tu refugio cuando no encuentres las palabras.','Quiero ser tu hogar, tu paz y tu lugar seguro…','ese rincón del mundo donde nunca te sientas sola.','Y si algún día se te olvida cómo brillar,','seré las estrellas que te acompañen hasta el amanecer.','Porque te quiero y te amo con todo mi corazon.']};
+ night:['Isabella,','quiero ser tu calma cuando el mundo duela,','tu sonrisa cuando la vida se vuelva gris,','tu refugio cuando no encuentres las palabras.','Quiero ser tu hogar, tu paz y tu lugar seguro…','ese rincón del mundo donde nunca te sientas sola.','Y si algún día se te olvida cómo brillar,','seré las estrellas que te acompañen hasta el amanecer.','Porque te quiero, con todo lo que soy y lo que siento.']};
 const TXT_OLD={
  day:['Isabella,','contigo cada mañana tiene sentido,','eres la luz que hace florecer mi día.','Quiero despertar pensando en ti,','caminar a tu lado entre tulipanes','y ser la razón de tu sonrisa.','Quiero ser todo para ti,','hoy, mañana y todos los días.','Cada día quiero elegirte a ti.'],
  night:['Isabella,','quiero ser tu calma cuando el día pese,','tu risa cuando todo se ponga gris,','tu abrazo cuando falten las palabras.','Quiero ser tu amigo, tu hogar, tu compañía…','quiero ser todo para ti.','Y si algún día no ves la luz,','yo seré las estrellas hasta que amanezca.','Te quiero con el corazón entero.']};
